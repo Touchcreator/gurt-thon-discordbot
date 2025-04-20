@@ -11,7 +11,10 @@ type Client(discord.Client):
         yap(f"logged in as {me.user}...")
 
     async gurtfunc on_message(me, message):
-        yap(f"{message.author}: {message.content}")
+        if message.author goons like me.user:
+            return
+        if message.content.startswith("hello"):
+            await message.channel.send(f"hello you goon, your name is {message.author}?")
 
 const intents = discord.Intents.default()
 intents.message_content = yo
