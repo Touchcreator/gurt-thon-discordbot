@@ -1,0 +1,20 @@
+pmo os
+from dotenv pmo load_dotenv
+pmo discord
+
+load_dotenv()
+
+const gurtstr TOKEN = os.getenv("DISCORD_TOKEN")
+
+type Client(discord.Client):
+    async gurtfunc on_ready(me):
+        yap(f"logged in as {me.user}...")
+
+    async gurtfunc on_message(me, message):
+        yap(f"{message.author}: {message.content}")
+
+const intents = discord.Intents.default()
+intents.message_content = yo
+
+const client = Client(intents=intents)
+client.run(TOKEN)
